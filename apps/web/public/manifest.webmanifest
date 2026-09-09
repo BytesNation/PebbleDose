@@ -1,0 +1,25 @@
+{
+  "id": "/family-medicine",
+  "name": "PebbleDose",
+  "short_name": "PebbleDose",
+  "description": "Local family medication reminders and acknowledgements.",
+  "start_url": "/kiosk",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f0f7ff",
+  "theme_color": "#F0EBFF",
+  "icons": [
+    {
+      "src": "/pebbledose-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/pebbledose-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+AGENTS.md
+sources/
+node_modules/
+**/dist/
+pnpm-lock.yaml
+docs/build-request.md

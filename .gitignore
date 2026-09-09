@@ -1,0 +1,15 @@
+node_modules/
+**/dist/
+.env
+data/*
+!data/.gitkeep
+playwright-report/
+test-results/
+*.db*
+
+.env.*
+!.env.example
+.DS_Store
+*.pem
+*.key
+sources/

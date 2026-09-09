@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <title>PebbleDose</title>
+  <rect width="512" height="512" rx="112" fill="#F0EBFF"/>
+  <path d="M140 310C160 288 202 280 252 282C311 279 357 295 376 321C399 353 367 384 322 390C269 399 199 394 158 381C121 369 115 336 140 310Z" fill="#69BEA0"/>
+  <path d="M163 219C181 197 218 188 260 190C307 188 344 201 356 226C372 258 350 287 307 296C268 304 214 299 184 287C152 274 143 244 163 219Z" fill="#8B6BD0"/>
+  <path d="M207 128C221 109 246 105 269 112C292 118 313 138 309 160C306 182 278 194 251 193C224 192 199 181 195 161C192 150 198 137 207 128Z" fill="#F6C65B"/>
+  <path d="M231 243L248 260L280 227" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

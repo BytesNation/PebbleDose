@@ -1,0 +1,37 @@
+{
+  "name": "family-medication-tracker",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.5.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "concurrently \"pnpm dev:api\" \"pnpm --filter @family/web dev\"",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "build": "pnpm --filter @family/web build && pnpm --filter @family/api build",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "node --env-file-if-exists=.env --import tsx packages/database/src/migrate.ts",
+    "db:seed": "node --env-file-if-exists=.env --import tsx packages/database/src/seed.ts",
+    "dev:api": "node --env-file-if-exists=.env --import tsx --watch apps/api/src/server.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "latest",
+    "@playwright/test": "latest",
+    "@types/node": "latest",
+    "concurrently": "latest",
+    "drizzle-kit": "latest",
+    "eslint": "latest",
+    "eslint-plugin-react-hooks": "latest",
+    "prettier": "latest",
+    "tsx": "latest",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "latest",
+    "vitest": "latest"
+  },
+  "license": "MIT"
+}

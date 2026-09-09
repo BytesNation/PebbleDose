@@ -1,0 +1,27 @@
+{
+  "name": "@family/web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "@tanstack/react-query": "latest",
+    "zod": "latest",
+    "lucide-react": "latest",
+    "@family/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "vite": "latest",
+    "@vitejs/plugin-react": "latest",
+    "tailwindcss": "latest",
+    "@tailwindcss/vite": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest"
+  },
+  "license": "MIT"
+}

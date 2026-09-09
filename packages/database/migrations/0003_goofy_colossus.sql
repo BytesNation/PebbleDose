@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `kiosk_pin_required` integer DEFAULT false NOT NULL;

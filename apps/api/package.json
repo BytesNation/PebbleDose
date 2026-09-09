@@ -1,0 +1,34 @@
+{
+  "name": "@family/api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --dir ../.. dev:api",
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@family/database": "workspace:*",
+    "@family/integrations": "workspace:*",
+    "@family/shared": "workspace:*",
+    "@fastify/cookie": "latest",
+    "@fastify/helmet": "latest",
+    "@fastify/multipart": "latest",
+    "@fastify/rate-limit": "latest",
+    "better-sqlite3": "^13.0.3",
+    "drizzle-orm": "^0.45.2",
+    "fastify": "latest",
+    "luxon": "latest",
+    "sharp": "^0.35.4",
+    "web-push": "^3.6.7",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/luxon": "latest",
+    "@types/web-push": "^3.6.4",
+    "tsup": "latest"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT"
+}

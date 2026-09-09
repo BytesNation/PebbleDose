@@ -1,0 +1,8 @@
+{
+  "name": "@family/integrations",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {},
+  "license": "MIT"
+}

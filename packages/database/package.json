@@ -1,0 +1,15 @@
+{
+  "name": "@family/database",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "drizzle-orm": "latest",
+    "better-sqlite3": "latest",
+    "@family/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "latest"
+  },
+  "license": "MIT"
+}
