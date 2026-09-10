@@ -13,3 +13,4 @@ test-results/
 *.pem
 *.key
 sources/
+release-output/

@@ -1,0 +1,32 @@
+name: Bug report
+description: Report a reproducible problem using fictional data.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Never include household databases, PINs, medication records, or private screenshots. Report security issues privately through the Security tab.
+  - type: input
+    id: version
+    attributes:
+      label: PebbleDose version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, browser, device, and Docker version.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true

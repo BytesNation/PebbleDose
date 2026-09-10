@@ -1,5 +1,5 @@
 {
-  "name": "family-medication-tracker",
+  "name": "pebbledose",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@11.5.0",
@@ -33,5 +33,6 @@
     "typescript-eslint": "latest",
     "vitest": "latest"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "version": "0.1.0"
 }

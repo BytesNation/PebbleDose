@@ -2,7 +2,25 @@
 
 <img src="apps/web/public/pebbledose-icon.svg" alt="PebbleDose icon" width="96" />
 
+[![CI](https://github.com/BytesNation/PebbleDose/actions/workflows/ci.yml/badge.svg)](https://github.com/BytesNation/PebbleDose/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/BytesNation/PebbleDose)](https://github.com/BytesNation/PebbleDose/releases/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Node.js 24](https://img.shields.io/badge/Node.js-24-339933?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+
 A local household medication kiosk with reminders, recorded acknowledgements, optional adult confirmation, and family rewards. Adults configure all medication names, dose text, instructions, and schedules. The app records an acknowledgement; it does not verify ingestion or give medical advice.
+
+## Features
+
+- Family kiosk with editable avatars and large touch targets.
+- Scheduled and as-needed medication, optional adult confirmation, and history.
+- Rewards, daily completion celebrations, sounds, and optional push notifications.
+- Local storage, no account service, and no telemetry.
+
+## Releases
+
+Start with the [latest release](https://github.com/BytesNation/PebbleDose/releases/latest). Each release includes source archives, SHA-256 checksums, and deployment notes. Read the [changelog](CHANGELOG.md) before updating an existing household. `main` contains ongoing development.
+
+Version 0.1.0 is the first public release. Physical-device acceptance remains outstanding; see [verification](docs/acceptance.md).
 
 ## Start with Docker
 
@@ -11,6 +29,7 @@ Requirements: Docker Engine with Compose v2, or Docker Desktop. Both AMD64 and A
 ```bash
 git clone https://github.com/BytesNation/PebbleDose.git
 cd PebbleDose
+git checkout v0.1.0
 docker compose up -d --build
 ```
 
@@ -73,6 +92,8 @@ docker compose cp api:/data/medicine-backup.db ./medicine-backup.db
 Back up `/data/images` separately if you uploaded images. Keep backups private. Stop the API before restoring a database and preserve write permission for the container's `node` user. The session secret can be regenerated during recovery; this signs out existing sessions without changing adult PINs.
 
 ## Testing
+
+Pull requests and pushes run lint, type checks, unit/API/audio tests, production-browser tests, and a production build. Native AMD64 and ARM64 runners build and smoke-test Docker images with external networking disabled. CodeQL scans JavaScript and TypeScript. Failed browser checks retain diagnostic artifacts for seven days. Dependabot opens weekly dependency and Action updates.
 
 ```bash
 pnpm lint
@@ -156,5 +177,7 @@ Push payloads contain generic reminder text, with no family or medication names.
 ## Contributing and license
 
 Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for setup and checks, and [SECURITY.md](SECURITY.md) for reporting vulnerabilities.
+
+Maintainers can follow the [release procedure](docs/releasing.md).
 
 Released under the [MIT license](LICENSE).
