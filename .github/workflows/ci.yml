@@ -66,7 +66,7 @@ jobs:
           -v "$PWD/tests/container-smoke.mjs:/app/container-smoke.mjs:ro"
           pebbledose-api:test node container-smoke.mjs
       - name: Validate web server configuration
-        run: docker run --rm --network none pebbledose-web:test nginx -t
+        run: docker run --rm --network none --add-host api:127.0.0.1 pebbledose-web:test nginx -t
   codeql:
     name: CodeQL
     runs-on: ubuntu-24.04

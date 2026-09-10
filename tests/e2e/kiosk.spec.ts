@@ -1,5 +1,9 @@
+import { e2eNow } from '../e2e-clock';
 import { test, expect } from '@playwright/test';
 test.describe.configure({ mode: 'serial' });
+test.beforeEach(async ({ page }) => {
+  await page.clock.setFixedTime(new Date(e2eNow));
+});
 let childId: string, supervisedId: string;
 test.beforeAll(async ({ playwright, browser }) => {
   const api = await playwright.request.newContext({
@@ -7,6 +11,7 @@ test.beforeAll(async ({ playwright, browser }) => {
     extraHTTPHeaders: { 'x-family-client': '1' },
   });
   const setupPage = await browser.newPage();
+  await setupPage.clock.setFixedTime(new Date(e2eNow));
   await setupPage.goto('http://127.0.0.1:3100/setup');
   await setupPage
     .getByLabel('Household name', { exact: true })
@@ -58,7 +63,7 @@ test.beforeAll(async ({ playwright, browser }) => {
             scheduleType: 'MORNING',
             timeOfDay: '00:01',
             daysOfWeek: [1, 2, 3, 4, 5, 6, 7],
-            startDate: new Date().toISOString().slice(0, 10),
+            startDate: e2eNow.slice(0, 10),
           },
         })
       ).status(),
@@ -379,7 +384,7 @@ test('multiple medicines advance one at a time without an early daily bonus', as
         medicationId,
         scheduleType: 'MORNING',
         timeOfDay: '00:01',
-        startDate: new Date().toISOString().slice(0, 10),
+        startDate: e2eNow.slice(0, 10),
         daysOfWeek: [1, 2, 3, 4, 5, 6, 7],
       },
     });
