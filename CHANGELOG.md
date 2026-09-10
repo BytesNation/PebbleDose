@@ -4,6 +4,10 @@ Changes are grouped by release. PebbleDose uses semantic versioning. During 0.x 
 
 ## [Unreleased]
 
+### Added
+
+- Screenshot gallery and a reproducible, isolated demo with fictional family data.
+
 ## [0.1.0] - 2026-09-09
 
 ### Added

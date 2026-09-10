@@ -16,6 +16,46 @@ A local household medication kiosk with reminders, recorded acknowledgements, op
 - Rewards, daily completion celebrations, sounds, and optional push notifications.
 - Local storage, no account service, and no telemetry.
 
+## Screenshots
+
+These are screenshots of the running app with fictional people, medication labels, and history. No real household records are shown.
+
+### Family kiosk
+
+Everyone's current status, next reminder, and points in one place.
+
+![Family kiosk with four fictional members and their medication status](docs/images/family-kiosk.png)
+
+<details>
+<summary>Member day, as-needed medication, and weekly history</summary>
+
+![Member screen with a scheduled dose, as-needed medication, and seven days of fictional history](docs/images/member-day.png)
+
+</details>
+
+<details>
+<summary>Parent dashboard</summary>
+
+![Parent dashboard showing fictional overdue reminders, adult confirmation, analytics, and recent activity](docs/images/parent-dashboard.png)
+
+</details>
+
+<details>
+<summary>Reward store</summary>
+
+![Reward store with family movie night, dessert choice, and a family adventure](docs/images/reward-store.png)
+
+</details>
+
+<details>
+<summary>Daily completion celebration</summary>
+
+![Daily completion screen with points, daily and streak bonuses, and reward progress](docs/images/daily-celebration.png)
+
+</details>
+
+See [the screenshot guide](docs/images/README.md) to recreate this demo locally.
+
 ## Releases
 
 Start with the [latest release](https://github.com/BytesNation/PebbleDose/releases/latest). Each release includes source archives, SHA-256 checksums, and deployment notes. Read the [changelog](CHANGELOG.md) before updating an existing household. `main` contains ongoing development.
