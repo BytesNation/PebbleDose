@@ -1,4 +1,4 @@
-FROM node:24-bookworm-slim AS base
+FROM node:26-bookworm-slim AS base
 RUN npm install -g pnpm@11.5.0
 WORKDIR /app
 FROM base AS build
@@ -13,7 +13,7 @@ RUN pnpm install --frozen-lockfile
 COPY . .
 RUN pnpm build
 RUN pnpm --filter @family/api deploy --prod --legacy /runtime
-FROM node:24-bookworm-slim AS api
+FROM node:26-bookworm-slim AS api
 WORKDIR /app
 COPY --from=build /runtime /app
 COPY --from=build /app/packages/database/migrations /app/migrations
